@@ -8,6 +8,13 @@ export const IntroductionContainer = styled.div<{ theme: ThemeDefinition }>`
 
   margin-top: 9rem;
 
+  .introduction-group {
+    display: flex;
+    flex-direction: row;
+
+    width: 45%;
+  }
+
   .introduction-items {
     display: flex;
     flex-direction: column;
@@ -35,5 +42,14 @@ export const IntroductionContainer = styled.div<{ theme: ThemeDefinition }>`
 
   .introduction-action {
     max-width: max-content;
+  }
+
+  @media screen and (max-width: 400px) {
+    flex-direction: column;
+    align-items: center;
+
+    .introduction-arrow-image {
+      transform: rotate(90deg);
+    }
   }
 `;
