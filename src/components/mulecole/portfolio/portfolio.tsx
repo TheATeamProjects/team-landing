@@ -1,35 +1,41 @@
-import { Picture } from "@/components/atom";
-import { useWindowSize } from "@/hooks/use-window-size";
+import { Grid, Picture } from "@/components/atom";
 import { useTheme } from "@/themes";
 import { PortfolioContainer } from "./style";
+import { Description } from "../description";
 
 export const Portfolio = () => {
   const theme = useTheme();
-  const { width } = useWindowSize();
 
   const images = [
-    { src: "/portfolio/1.png", alt: "Cybersec", key: "portfolio-1" },
-    { src: "/portfolio/2.png", alt: "RealState", key: "portfolio-2" },
-    { src: "/portfolio/3.png", alt: "ItsHere", key: "portfolio-3" },
-    { src: "/portfolio/4.png", alt: "SparkWorld", key: "portfolio-4" },
+    { src: "/assets/portfolio/1.png", alt: "Cybersec", key: "portfolio-1" },
+    { src: "/assets/portfolio/2.png", alt: "RealState", key: "portfolio-2" },
+    { src: "/assets/portfolio/3.png", alt: "ItsHere", key: "portfolio-3" },
+    { src: "/assets/portfolio/4.png", alt: "SparkWorld", key: "portfolio-4" },
   ];
 
   return (
     <PortfolioContainer theme={theme}>
-      <h2 className="portfolio-title">See Our Portfolio</h2>
+      <Description lineVisibility={true} title="See Our Portfolio" desc="" />
 
-      <div className="portfolio-samples">
+      <Grid container gap="1.5rem 1.5rem">
         {images.map((image) => {
           return (
-            <Picture
-              alt={image.alt}
+            <Grid
+              item
               key={image.key}
-              src={image.src}
-              width={width / 2}
-            />
+              xs={12}
+              md={6}
+              className="portfolio-sample-item"
+            >
+              <Picture
+                alt={image.alt}
+                src={image.src}
+                className="portfolio-sample-item-image"
+              />
+            </Grid>
           );
         })}
-      </div>
+      </Grid>
     </PortfolioContainer>
   );
 };

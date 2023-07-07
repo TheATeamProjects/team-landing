@@ -13,9 +13,7 @@ export default function Home() {
       <Container background={theme.palette.accent.main}>
         <Container padding="3rem 4rem">
           <Header />
-          <Container padding="0 6rem">
-            <Introduction />
-          </Container>
+          <Introduction />
         </Container>
       </Container>
 

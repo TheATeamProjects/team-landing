@@ -7,7 +7,7 @@ export const PortfolioContainer = styled.div<{ theme: ThemeDefinition }>`
   align-items: flex-start;
   gap: 3.5rem;
 
-  margin-top: 10rem;
+  margin: 10rem 0;
 
   .portfolio-title {
     color: ${({ theme }) => theme.palette.secondary.main};
@@ -18,21 +18,15 @@ export const PortfolioContainer = styled.div<{ theme: ThemeDefinition }>`
     line-height: normal;
   }
 
-  .portfolio-samples {
-    display: flex;
-    flex-direction: row;
-    gap: 1.5rem 1.5rem;
-    justify-content: space-between;
-    align-items: center;
+  .portfolio-sample-item {
+    flex-basis: calc(50% - 0.75rem);
 
-    flex-wrap: wrap;
-
-    > * {
-      /* width: 54rem; */
-      /* height: 22rem; */
-      flex-grow: 0;
-      flex-shrink: 1;
-      border-radius: 8px;
+    @media screen and (max-width: 700px) {
+      flex-basis: calc(100% - 0.75rem);
     }
+  }
+
+  .portfolio-sample-item-image {
+    border-radius: 8px;
   }
 `;

@@ -3,6 +3,6 @@
 import { TextFieldContainer } from "../text-field/style";
 import { TextFieldProps } from "./interface";
 
-export const TextField = (props : TextFieldProps) => {
-  return <TextFieldContainer {...props} />
+export const TextField = (props: TextFieldProps) => {
+  return <TextFieldContainer {...props} />;
 };

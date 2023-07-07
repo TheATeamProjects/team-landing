@@ -6,7 +6,7 @@ import { PersonalProfileProps } from "./interface";
 
 
 export const BackgroundDiv = styled(Box)<PersonalProfileProps>`
-  background-image: url(${({ imgUrl }) => imgUrl});
+  background-image: url(${({ url }) => url});
   background-size: cover;
   background-position: center;
   height: 210px;

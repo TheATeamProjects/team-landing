@@ -1,10 +1,7 @@
 import { BoxProps } from "@mui/material";
 
 export interface PersonalProfileProps extends BoxProps {
-  imgUrl: string;
+  url: string;
   name?: string;
   role?: string;
 }
-
-
-

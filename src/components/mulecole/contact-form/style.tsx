@@ -1,3 +1,5 @@
+"use client";
+
 import { ThemeDefinition } from "@/themes";
 import styled from "@emotion/styled";
 
@@ -14,18 +16,35 @@ export const BackgroundForm = styled.div<{ theme: ThemeDefinition }>`
   .form-footer {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: end;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
   }
   .submit-btn {
-    background-color: ${({ theme }) => theme.palette.secondary.main};
-    border-radius: 4px;
-    padding: 20px 50px;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.1px;
+    width: 150px;
+
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      margin-top: 1rem;
+    }
   }
   .attach-parent {
     display: flex;
     flex-direction: row;
     gap: 8px;
     align-items: center;
+
+    @media screen and (max-width: 600px) {
+      align-items: flex-start;
+    }
   }
   .text-btn {
     padding: 0;

@@ -7,6 +7,26 @@ export const IntroductionContainer = styled.div<{ theme: ThemeDefinition }>`
   justify-content: space-between;
 
   margin-top: 9rem;
+  padding: 0 6rem;
+
+  @media screen and (max-width: 897px) {
+    padding: 0 0;
+
+    .introduction-arrow {
+      visibility: hidden;
+    }
+  }
+
+  .introduction-arrow-parent {
+    > div {
+      text-align: left;
+    }
+  }
+
+  .introduction-arrow {
+    margin-top: 50px;
+    justify-self: flex-start;
+  }
 
   .introduction-group {
     display: flex;
@@ -26,7 +46,8 @@ export const IntroductionContainer = styled.div<{ theme: ThemeDefinition }>`
 
   .introduction-title {
     color: ${({ theme }) => theme.palette.secondary.main};
-    font-size: 2.625rem;
+    line-height: 4.0625rem;
+    font-size: 2.5rem;
     font-style: normal;
     font-weight: 500;
     line-height: 4.0625rem;
@@ -34,10 +55,11 @@ export const IntroductionContainer = styled.div<{ theme: ThemeDefinition }>`
 
   .introduction-description {
     color: ${({ theme }) => theme.grey[200]};
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 1.5rem;
   }
 
   .introduction-action {

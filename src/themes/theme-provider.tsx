@@ -14,6 +14,9 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
       primary: {
         main: defaultTheme.palette.primary.main,
       },
+      secondary: {
+        main: defaultTheme.palette.secondary.main,
+      },
     },
   });
 
