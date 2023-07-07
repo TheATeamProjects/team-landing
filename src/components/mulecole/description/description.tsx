@@ -5,16 +5,15 @@ import { Typography } from "@/components/atom";
 import { DescriptionPropsTypes } from "./interface";
 
 export const Description: FC<DescriptionPropsTypes> = (
-  props: DescriptionPropsTypes
+  { title, desc, lineVisibility }: DescriptionPropsTypes
 ) => {
-  const { title, desc, lineVisibility } = props;
   const theme = useTheme();
   return (
     <DescriptionContainer theme={theme}>
       <Typography
         fontWeight={"500"}
         mb={"24px"}
-        color={theme.palette.primary}
+        color={theme.palette.secondary.main}
         fontSize="28px"
         className="title"
       >
