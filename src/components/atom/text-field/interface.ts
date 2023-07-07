@@ -1,6 +1,6 @@
-import {TextFieldProps } from '@mui/material';
+import { TextFieldProps as MuiTextFieldProps, TextFieldVariants } from "@mui/material";
 
-export interface MyTextFieldProps extends TextFieldProps {
-    label:string
-}
-
+type TextFieldPropsType = {
+  variant?: TextFieldVariants;
+} & Omit<MuiTextFieldProps, "variant">;
+export interface TextFieldProps extends TextFieldPropsType {}
