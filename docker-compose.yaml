@@ -1,0 +1,12 @@
+version: "3.6"
+
+services:
+  app:
+    build: .
+    command: npm run start
+    ports:
+      - ${APP_PORT}:3000
+    volumes:
+      - ./.next:/home/node/app/.next
+      - ./public:/home/node/app/public
+    restart: always
